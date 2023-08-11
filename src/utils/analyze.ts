@@ -132,10 +132,9 @@ export function analyze(code : string) {
 
         if(isWhiteSpace(code[pos+1]) || !/^[\*]/.test(code[pos+1])){
           tokens.push({type:Type.OPERATOR, value:code[pos]})
-          state = 0
-        }else{
-          state = 14
         }
+        
+        state = 0
         pos++
         break;
 
@@ -181,36 +180,30 @@ export function analyze(code : string) {
       case 11 : // < > = cont
         console.log(code[pos], state)
 
-        if(/^[=]/.test(code[pos]))
+        if(/^[=]/.test(code[pos])){
           tokens.push({type:Type.OPERATOR, value:code[pos] + code[pos-1]})
-        else
+          pos++
+        }
           state = 0
         break;
       
       case 12 : // &
         console.log(code[pos], state)
 
-        if(/^[&]/.test(code[pos]))
+        if(/^[&]/.test(code[pos])){
           tokens.push({type:Type.OPERATOR, value:code[pos] + code[pos-1]})
-        else
+          pos++
+        }
           state = 0
         break;
 
       case 13 : // |
         console.log(code[pos], state)
 
-        if(/^[\|]/.test(code[pos]))
+        if(/^[\|]/.test(code[pos])){
           tokens.push({type:Type.OPERATOR, value:code[pos] + code[pos-1]})
-        else
-          state = 0
-        break;
-
-      case 14 : // *
-        console.log(code[pos], state)
-
-        if(/^[\*]/.test(code[pos]))
-          tokens.push({type:Type.OPERATOR, value:code[pos] + code[pos-1]})
-        else
+          pos++
+        }
           state = 0
         break;
 
