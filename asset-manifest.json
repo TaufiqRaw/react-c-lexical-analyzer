@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-c-lexical-analyzer/static/css/main.36d74d96.css",
-    "main.js": "/react-c-lexical-analyzer/static/js/main.b6f5f906.js",
+    "main.js": "/react-c-lexical-analyzer/static/js/main.d903e21e.js",
     "index.html": "/react-c-lexical-analyzer/index.html",
     "main.36d74d96.css.map": "/react-c-lexical-analyzer/static/css/main.36d74d96.css.map",
-    "main.b6f5f906.js.map": "/react-c-lexical-analyzer/static/js/main.b6f5f906.js.map"
+    "main.d903e21e.js.map": "/react-c-lexical-analyzer/static/js/main.d903e21e.js.map"
   },
   "entrypoints": [
     "static/css/main.36d74d96.css",
-    "static/js/main.b6f5f906.js"
+    "static/js/main.d903e21e.js"
   ]
 }
